@@ -8,9 +8,6 @@
     "bare-process": "^4.0.0",
     "safety-catch": "^1.0.2"
   },
-  "devDependencies": {
-    "standard": "^17.0.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/mafintosh/graceful-goodbye.git"
@@ -22,12 +19,18 @@
     }
   },
   "scripts": {
-    "test": "standard"
+    "format": "prettier --write .",
+    "lint": "prettier --check .",
+    "test": "npm run lint"
   },
   "author": "Mathias Buus (@mafintosh)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mafintosh/graceful-goodbye/issues"
   },
-  "homepage": "https://github.com/mafintosh/graceful-goodbye"
+  "homepage": "https://github.com/mafintosh/graceful-goodbye",
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "prettier-config-holepunch": "^1.0.0"
+  }
 }
