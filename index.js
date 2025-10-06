@@ -31,8 +31,7 @@ function onexit() {
   const order = []
 
   for (const h of handlers.sort((a, b) => b.position - a.position)) {
-    if (!order.length || order[order.length - 1][0].position !== h.position)
-      order.push([])
+    if (!order.length || order[order.length - 1][0].position !== h.position) order.push([])
     order[order.length - 1].push(h)
   }
 
