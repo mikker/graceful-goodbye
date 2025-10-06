@@ -8,7 +8,7 @@ npm install graceful-goodbye
 
 ## Usage
 
-``` js
+```js
 import goodbye from 'graceful-goodbye'
 
 goodbye(async function () {
@@ -22,8 +22,8 @@ goodbye(async function () {
 
 Register an async function to be run before process exit.
 
-* Ran when SIGTERM/SIGINT is received
-* Ran if the event loop is about to end
+- Ran when SIGTERM/SIGINT is received
+- Ran if the event loop is about to end
 
 If a process signal is received and `graceful-goodbye` is the only signal handler it mimicks the default behaivour of exiting
 the process when the exit handlers has run with a 130 exit code. If other handlers are registered, it defers to them to exit the process.
@@ -43,7 +43,7 @@ Boolean if the exit code is running.
 
 ## Position
 
-``` js
+```js
 goodbye(async () => console.log('last'), 2)
 goodbye(async () => console.log('first'), 0)
 goodbye(async () => console.log('middle'), 1)
