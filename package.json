@@ -20,7 +20,8 @@
   },
   "scripts": {
     "format": "prettier --write .",
-    "test": "prettier --check . && npm run lint"
+    "lint": "prettier --check . && lunte",
+    "test": "npm run lint"
   },
   "author": "Mathias Buus (@mafintosh)",
   "license": "MIT",
@@ -29,6 +30,7 @@
   },
   "homepage": "https://github.com/mafintosh/graceful-goodbye",
   "devDependencies": {
+    "lunte": "^1.0.0",
     "prettier": "^3.6.2",
     "prettier-config-holepunch": "^2.0.0"
   }

@@ -72,11 +72,13 @@ function goodbye(fn, position = 0) {
   const handler = { position, fn }
   handlers.push(handler)
 
-  return function unregister() {
+  function unregister() {
     const i = handlers.indexOf(handler)
     if (i > -1) handlers.splice(i, 1)
     if (!handlers.length) cleanup()
   }
+
+  return unregister
 }
 
 function exit() {
